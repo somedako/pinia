@@ -5,28 +5,6 @@ import { ref } from 'vue';
 const url =
     'https://api.themoviedb.org/3/search/movie?api_key=4dbaa5ad03b94decf397f934a35f9207&query=';
 
-// export const useSearchStore = defineStore('searchStore', {
-//     state: () => ({
-//         loader: false,
-//         movies: [],
-//     }),
-//     actions: {
-//         async getMovies(search) {
-//             this.loader = true;
-//             const res = await fetch(`${url}${search}`);
-//             const data = await res.json();
-//             this.movies = data.results;
-//             this.loader = false;
-//         },
-
-//         addToUserMovies(object) {
-//             const movieStore = useMovieStore();
-//             movieStore.movies.push({ ...object, isWatched: false });
-//             movieStore.activeTab = 1;
-//         },
-//     },
-// });
-
 export const useSearchStore = defineStore('searchStore', () => {
     const loader = ref(false);
     const movies = ref([]);

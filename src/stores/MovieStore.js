@@ -1,38 +1,6 @@
 import { defineStore } from 'pinia';
 import { ref, computed, watch } from 'vue';
 
-// export const useMovieStore = defineStore('movieStore', {
-//     state: () => ({
-//         movies: [],
-//         activeTab: 1,
-//     }),
-//     //на основе стейта сделать фльтрацию изменить исходный массив обьект значение  не могут быть асинхронными
-//     //getters изминения state и могут быть асинхронными
-//     getters: {
-//         watchMovies() {
-//             return this.movies.filter((el) => el.isWatched);
-//         },
-//         totalCountMovies() {
-//             return this.movies.length;
-//         },
-//     },
-
-//     actions: {
-//         setActiveTab(id) {
-//             return (this.activeTab = id);
-//         },
-
-//         toggleWatched(id) {
-//             const idx = this.movies.findIndex((el) => el.id === id);
-//             this.movies[idx].isWatched = !this.movies[idx].isWatched;
-//         },
-
-//         deleteMovie(id) {
-//             this.movies = this.movies.filter((el) => el.id !== id);
-//         },
-//     },
-// });
-
 export const useMovieStore = defineStore('movieStore', () => {
     const movies = ref([]);
     const activeTab = ref(2);
